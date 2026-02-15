@@ -1,0 +1,10 @@
+.deps/
+.runtime/
+__pycache__/
+*.pyc
+.agents/
+.codex/
+.aws/
+.env
+.env.*
+!.env.example

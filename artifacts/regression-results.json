@@ -1,0 +1,77 @@
+[
+  {
+    "test": "__main__.RobotIntegration.test_01_normal_execution_and_gazebo_confirmation",
+    "command_id": "67742cb21c374cf683e7c6dc73a9b840",
+    "status": "SUCCEEDED",
+    "reason": "MEASURED_TARGET_REACHED",
+    "cancel_acknowledged": false
+  },
+  {
+    "test": "__main__.RobotIntegration.test_02_invalid_and_stale_commands_are_not_sent",
+    "status": "PASSED",
+    "rejections": 4
+  },
+  {
+    "test": "__main__.RobotIntegration.test_03_cancel_and_replace",
+    "command_id": "b6ebecad35634133b053d25b0c0e75ca",
+    "status": "CANCELLED",
+    "reason": "REPLACED",
+    "cancel_acknowledged": true
+  },
+  {
+    "test": "__main__.RobotIntegration.test_03_cancel_and_replace",
+    "command_id": "61b89d9696eb48ef807865a8da6edce9",
+    "status": "SUCCEEDED",
+    "reason": "MEASURED_TARGET_REACHED",
+    "cancel_acknowledged": false
+  },
+  {
+    "test": "__main__.RobotIntegration.test_03_cancel_and_replace",
+    "command_id": "67ad18be36e340b197bdd52d94d2c733",
+    "status": "CANCELLED",
+    "reason": "CANCELLED",
+    "cancel_acknowledged": true
+  },
+  {
+    "test": "__main__.RobotIntegration.test_04_feedback_loss_latches_until_recovery",
+    "command_id": "a69d70afc05746f18565e319e7152707",
+    "status": "FAULT",
+    "reason": "STALE_FEEDBACK",
+    "cancel_acknowledged": true
+  },
+  {
+    "test": "__main__.RobotIntegration.test_04_feedback_loss_latches_until_recovery",
+    "command_id": "70ae94e6f80541f8bb2a645ab9783e47",
+    "status": "SUCCEEDED",
+    "reason": "MEASURED_TARGET_REACHED",
+    "cancel_acknowledged": false
+  },
+  {
+    "test": "__main__.RobotIntegration.test_05_paused_physics_detected_by_wall_clock",
+    "command_id": "c7bbb65e9448476682732ab3b9f0499d",
+    "status": "FAULT",
+    "reason": "STALE_FEEDBACK",
+    "cancel_acknowledged": true
+  },
+  {
+    "test": "__main__.RobotIntegration.test_06_controller_deactivation",
+    "command_id": "a91688bef6134df98012a72fe8c829bd",
+    "status": "FAULT",
+    "reason": "CONTROLLER_EXECUTION_ERROR: {'status': 2, 'error_code': 0, 'error_string': ''}",
+    "cancel_acknowledged": false
+  },
+  {
+    "test": "__main__.RobotIntegration.test_07_success_result_with_mismatched_observation",
+    "command_id": "c1edd5c5d3014207be09a7087613079a",
+    "status": "FAULT",
+    "reason": "EXECUTION_MISMATCH",
+    "cancel_acknowledged": false
+  },
+  {
+    "test": "__main__.RobotIntegration.test_08_wall_deadline",
+    "command_id": "8a6875761c804a0e995d12eb09f3b931",
+    "status": "FAULT",
+    "reason": "EXECUTION_WALL_TIMEOUT",
+    "cancel_acknowledged": true
+  }
+]

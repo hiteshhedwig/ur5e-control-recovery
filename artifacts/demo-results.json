@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "steps": [
+    {
+      "step": "1. Verified move",
+      "command_id": "e4063c6b1571446cbd8b7b5df223755f",
+      "status": "SUCCEEDED",
+      "reason": "MEASURED_TARGET_REACHED",
+      "cancel_acknowledged": false
+    },
+    {
+      "step": "2. Replaced command",
+      "command_id": "b18d726da95642f6a36d5e0979e7b841",
+      "status": "CANCELLED",
+      "reason": "REPLACED",
+      "cancel_acknowledged": true
+    },
+    {
+      "step": "3. Replacement reaches target",
+      "command_id": "adb21f9e2f2f428c946646eea86b859f",
+      "status": "SUCCEEDED",
+      "reason": "MEASURED_TARGET_REACHED",
+      "cancel_acknowledged": false
+    },
+    {
+      "step": "4. Feedback delivery interrupted at consumer",
+      "command_id": "8a4fd86505fa4fd19018e8e9b284b9fd",
+      "status": "FAULT",
+      "reason": "STALE_FEEDBACK",
+      "cancel_acknowledged": true
+    },
+    {
+      "step": "6. Fresh command after recovery",
+      "command_id": "004dd1b324fc44b3ab9373ff8bcb3222",
+      "status": "SUCCEEDED",
+      "reason": "MEASURED_TARGET_REACHED",
+      "cancel_acknowledged": false
+    }
+  ]
+}
