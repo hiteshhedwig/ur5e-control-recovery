@@ -1,0 +1,258 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1600
+PlayResY: 1000
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Title,DejaVu Sans,30,&H00FFFFFF,&H00FFFFFF,&H00101820,&H00101820,-1,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Accent,DejaVu Sans,20,&H00BFD65A,&H00FFFFFF,&H00101820,&H00101820,-1,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Heading,DejaVu Sans,29,&H00FFFFFF,&H00FFFFFF,&H00101820,&H00101820,-1,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Body,DejaVu Sans,25,&H00E7E5E2,&H00FFFFFF,&H00101820,&H00101820,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Proof,DejaVu Sans,22,&H00BFD65A,&H00FFFFFF,&H00101820,&H00101820,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Data,DejaVu Sans,19,&H00CBCBCB,&H00FFFFFF,&H00101820,&H00101820,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:47.07,Title,,0,0,0,,{\an7\pos(28,20)\q2}UR5e Control & Recovery | Replace an executing command
+Dialogue: 0,0:00:00.00,0:00:47.07,Accent,,0,0,0,,{\an7\pos(28,62)\q2}EXPLANATORY REPLAY  |  Source motion at 0.5x speed + labeled reading pauses  |  SIMULATION ONLY
+Dialogue: 0,0:00:00.00,0:00:07.00,Accent,,0,0,0,,{\an7\pos(28,132)\q2}PAUSED FOR EXPLANATION
+Dialogue: 0,0:00:00.00,0:00:07.00,Heading,,0,0,0,,{\an7\pos(28,183)\q2}What are we testing?
+Dialogue: 0,0:00:00.00,0:00:07.00,Body,,0,0,0,,{\an7\pos(28,285)\q2}What happens when a new command\Narrives before the current motion has\Nfinished? B must replace A, rather\Nthan wait in a queue.
+Dialogue: 0,0:00:00.00,0:00:07.00,Proof,,0,0,0,,{\an7\pos(28,565)\q2}Watch for the change of direction before\Nthe arm reaches A.
+Dialogue: 0,0:00:00.00,0:00:07.00,Data,,0,0,0,,{\an7\pos(28,795)\q2}Reading pause = frozen video frame. It is\Nnot an extra robot stop or a new simulation\Nevent.
+Dialogue: 0,0:00:00.00,0:00:00.24,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:00.24,0:00:00.48,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:00.48,0:00:00.72,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:00.72,0:00:00.96,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:00.96,0:00:01.20,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:01.20,0:00:01.44,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:01.44,0:00:01.68,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:01.68,0:00:01.92,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:01.92,0:00:02.16,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:02.16,0:00:02.40,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:02.40,0:00:02.64,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:02.64,0:00:02.88,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:02.88,0:00:03.12,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:03.12,0:00:03.36,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:03.36,0:00:03.60,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:03.60,0:00:03.84,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:03.84,0:00:04.08,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:04.08,0:00:04.32,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:04.32,0:00:04.56,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:04.56,0:00:04.80,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:04.80,0:00:05.04,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:05.04,0:00:05.28,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:05.28,0:00:05.52,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:05.52,0:00:05.76,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:05.76,0:00:06.00,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:06.00,0:00:06.24,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:06.24,0:00:06.48,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:06.48,0:00:06.72,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:06.72,0:00:06.96,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:06.96,0:00:07.00,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:07.00,0:00:08.93,Accent,,0,0,0,,{\an7\pos(28,132)\q2}SOURCE FOOTAGE PLAYING AT 0.5x
+Dialogue: 0,0:00:07.00,0:00:08.93,Heading,,0,0,0,,{\an7\pos(28,183)\q2}What are we testing?
+Dialogue: 0,0:00:07.00,0:00:08.93,Body,,0,0,0,,{\an7\pos(28,285)\q2}What happens when a new command\Narrives before the current motion has\Nfinished? B must replace A, rather\Nthan wait in a queue.
+Dialogue: 0,0:00:07.00,0:00:08.93,Proof,,0,0,0,,{\an7\pos(28,565)\q2}Watch for the change of direction before\Nthe arm reaches A.
+Dialogue: 0,0:00:07.00,0:00:08.93,Data,,0,0,0,,{\an7\pos(28,795)\q2}Reading pause = frozen video frame. It is\Nnot an extra robot stop or a new simulation\Nevent.
+Dialogue: 0,0:00:07.00,0:00:07.24,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.00s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:07.24,0:00:07.48,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.12s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:07.48,0:00:07.72,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.24s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:07.72,0:00:07.96,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.36s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: +0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:07.96,0:00:08.20,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.48s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:08.20,0:00:08.44,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.60s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: +0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:08.44,0:00:08.68,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.72s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  +0.00
+Dialogue: 0,0:00:08.68,0:00:08.92,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.84s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:08.92,0:00:08.93,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.96s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:08.93,0:00:12.93,Accent,,0,0,0,,{\an7\pos(28,132)\q2}PAUSED FOR EXPLANATION
+Dialogue: 0,0:00:08.93,0:00:12.93,Heading,,0,0,0,,{\an7\pos(28,183)\q2}1 / A is still executing
+Dialogue: 0,0:00:08.93,0:00:12.93,Body,,0,0,0,,{\an7\pos(28,285)\q2}Start toward pose A with a six-second\Ntrajectory. The program waits only\N2.2 wall seconds before requesting a\Nreplacement.
+Dialogue: 0,0:00:08.93,0:00:12.93,Proof,,0,0,0,,{\an7\pos(28,565)\q2}A is unfinished when the replacement\Nrequest arrives.
+Dialogue: 0,0:00:08.93,0:00:12.93,Data,,0,0,0,,{\an7\pos(28,795)\q2}Reading pause = frozen video frame. It is\Nnot an extra robot stop or a new simulation\Nevent.
+Dialogue: 0,0:00:08.93,0:00:09.17,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:09.17,0:00:09.41,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:09.41,0:00:09.65,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:09.65,0:00:09.89,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:09.89,0:00:10.13,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:10.13,0:00:10.37,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:10.37,0:00:10.61,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:10.61,0:00:10.85,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:10.85,0:00:11.09,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:11.09,0:00:11.33,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:11.33,0:00:11.57,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:11.57,0:00:11.81,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:11.81,0:00:12.05,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:12.05,0:00:12.29,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:12.29,0:00:12.53,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:12.53,0:00:12.77,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:12.77,0:00:12.93,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:12.93,0:00:17.40,Accent,,0,0,0,,{\an7\pos(28,132)\q2}SOURCE FOOTAGE PLAYING AT 0.5x
+Dialogue: 0,0:00:12.93,0:00:17.40,Heading,,0,0,0,,{\an7\pos(28,183)\q2}1 / A is still executing
+Dialogue: 0,0:00:12.93,0:00:17.40,Body,,0,0,0,,{\an7\pos(28,285)\q2}Start toward pose A with a six-second\Ntrajectory. The program waits only\N2.2 wall seconds before requesting a\Nreplacement.
+Dialogue: 0,0:00:12.93,0:00:17.40,Proof,,0,0,0,,{\an7\pos(28,565)\q2}A is unfinished when the replacement\Nrequest arrives.
+Dialogue: 0,0:00:12.93,0:00:17.40,Data,,0,0,0,,{\an7\pos(28,795)\q2}Reading pause = frozen video frame. It is\Nnot an extra robot stop or a new simulation\Nevent.
+Dialogue: 0,0:00:12.93,0:00:13.17,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 00.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:13.17,0:00:13.41,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 01.09s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.00  -1.57  +0.00  -1.57  -0.00  -0.00
+Dialogue: 0,0:00:13.41,0:00:13.65,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 01.21s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.00  -1.57  -0.00  -1.57  +0.00  -0.00
+Dialogue: 0,0:00:13.65,0:00:13.89,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 01.33s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.00  -1.57  -0.00  -1.57  +0.00  +0.00
+Dialogue: 0,0:00:13.89,0:00:14.13,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 01.45s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.00  -1.57  -0.01  -1.57  +0.00  -0.00
+Dialogue: 0,0:00:14.13,0:00:14.37,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 01.57s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.01  -1.56  -0.01  -1.57  +0.01  -0.00
+Dialogue: 0,0:00:14.37,0:00:14.61,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 01.69s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.01  -1.56  -0.02  -1.56  +0.01  -0.00
+Dialogue: 0,0:00:14.61,0:00:14.85,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 01.81s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.01  -1.55  -0.02  -1.56  +0.01  -0.00
+Dialogue: 0,0:00:14.85,0:00:15.09,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 01.93s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.02  -1.55  -0.03  -1.56  +0.02  -0.00
+Dialogue: 0,0:00:15.09,0:00:15.33,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 02.05s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.02  -1.54  -0.04  -1.55  +0.03  -0.00
+Dialogue: 0,0:00:15.33,0:00:15.57,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 02.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.02  -1.54  -0.05  -1.55  +0.03  -0.00
+Dialogue: 0,0:00:15.57,0:00:15.81,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 02.29s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.03  -1.53  -0.06  -1.55  +0.04  -0.00
+Dialogue: 0,0:00:15.81,0:00:16.05,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 02.41s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.04  -1.52  -0.07  -1.54  +0.05  -0.00
+Dialogue: 0,0:00:16.05,0:00:16.29,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 02.53s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.04  -1.51  -0.09  -1.54  +0.05  -0.00
+Dialogue: 0,0:00:16.29,0:00:16.53,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 02.65s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.05  -1.50  -0.10  -1.53  +0.06  -0.00
+Dialogue: 0,0:00:16.53,0:00:16.77,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 02.77s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.05  -1.49  -0.11  -1.53  +0.07  -0.00
+Dialogue: 0,0:00:16.77,0:00:17.01,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 02.89s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.06  -1.48  -0.13  -1.52  +0.08  -0.00
+Dialogue: 0,0:00:17.01,0:00:17.25,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.01s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.07  -1.47  -0.14  -1.52  +0.09  -0.00
+Dialogue: 0,0:00:17.25,0:00:17.40,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.13s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:17.40,0:00:25.40,Accent,,0,0,0,,{\an7\pos(28,132)\q2}PAUSED FOR EXPLANATION
+Dialogue: 0,0:00:17.40,0:00:25.40,Heading,,0,0,0,,{\an7\pos(28,183)\q2}2 / Cancel A; start B
+Dialogue: 0,0:00:17.40,0:00:25.40,Body,,0,0,0,,{\an7\pos(28,285)\q2}Request cancellation and wait for the\Ncontroller's acknowledgement. Mark A\Nas CANCELLED / REPLACED, then send B\Nwith a distinct command ID.
+Dialogue: 0,0:00:17.40,0:00:25.40,Proof,,0,0,0,,{\an7\pos(28,565)\q2}Acknowledgement is a protocol event. It\Ndoes not mean the joints instantly\Nreached zero velocity.
+Dialogue: 0,0:00:17.40,0:00:25.40,Data,,0,0,0,,{\an7\pos(28,795)\q2}Reading pause = frozen video frame. It is\Nnot an extra robot stop or a new simulation\Nevent.
+Dialogue: 0,0:00:17.40,0:00:17.64,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:17.64,0:00:17.88,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:17.88,0:00:18.12,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:18.12,0:00:18.36,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:18.36,0:00:18.60,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:18.60,0:00:18.84,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:18.84,0:00:19.08,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:19.08,0:00:19.32,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:19.32,0:00:19.56,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:19.56,0:00:19.80,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:19.80,0:00:20.04,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:20.04,0:00:20.28,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:20.28,0:00:20.52,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:20.52,0:00:20.76,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:20.76,0:00:21.00,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:21.00,0:00:21.24,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:21.24,0:00:21.48,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:21.48,0:00:21.72,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:21.72,0:00:21.96,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:21.96,0:00:22.20,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:22.20,0:00:22.44,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:22.44,0:00:22.68,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:22.68,0:00:22.92,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:22.92,0:00:23.16,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:23.16,0:00:23.40,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:23.40,0:00:23.64,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:23.64,0:00:23.88,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:23.88,0:00:24.12,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:24.12,0:00:24.36,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:24.36,0:00:24.60,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:24.60,0:00:24.84,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:24.84,0:00:25.08,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:25.08,0:00:25.32,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:25.32,0:00:25.40,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:25.40,0:00:35.74,Accent,,0,0,0,,{\an7\pos(28,132)\q2}SOURCE FOOTAGE PLAYING AT 0.5x
+Dialogue: 0,0:00:25.40,0:00:35.74,Heading,,0,0,0,,{\an7\pos(28,183)\q2}2 / Cancel A; start B
+Dialogue: 0,0:00:25.40,0:00:35.74,Body,,0,0,0,,{\an7\pos(28,285)\q2}Request cancellation and wait for the\Ncontroller's acknowledgement. Mark A\Nas CANCELLED / REPLACED, then send B\Nwith a distinct command ID.
+Dialogue: 0,0:00:25.40,0:00:35.74,Proof,,0,0,0,,{\an7\pos(28,565)\q2}Acknowledgement is a protocol event. It\Ndoes not mean the joints instantly\Nreached zero velocity.
+Dialogue: 0,0:00:25.40,0:00:35.74,Data,,0,0,0,,{\an7\pos(28,795)\q2}Reading pause = frozen video frame. It is\Nnot an extra robot stop or a new simulation\Nevent.
+Dialogue: 0,0:00:25.40,0:00:25.64,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.46  -0.16  -1.51  +0.10  +0.00
+Dialogue: 0,0:00:25.64,0:00:25.88,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.29s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.45  -0.17  -1.51  +0.11  +0.00
+Dialogue: 0,0:00:25.88,0:00:26.12,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.41s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.09  -1.45  -0.18  -1.50  +0.11  +0.00
+Dialogue: 0,0:00:26.12,0:00:26.36,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.53s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.09  -1.44  -0.19  -1.50  +0.12  +0.00
+Dialogue: 0,0:00:26.36,0:00:26.60,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.65s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.09  -1.43  -0.20  -1.50  +0.12  +0.00
+Dialogue: 0,0:00:26.60,0:00:26.84,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.77s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.09  -1.43  -0.21  -1.50  +0.12  +0.00
+Dialogue: 0,0:00:26.84,0:00:27.08,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 03.89s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.42  -0.22  -1.50  +0.12  +0.01
+Dialogue: 0,0:00:27.08,0:00:27.32,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 04.01s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.08  -1.41  -0.22  -1.50  +0.11  +0.01
+Dialogue: 0,0:00:27.32,0:00:27.56,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 04.13s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.07  -1.40  -0.23  -1.50  +0.11  +0.01
+Dialogue: 0,0:00:27.56,0:00:27.80,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 04.25s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.06  -1.40  -0.24  -1.50  +0.10  +0.02
+Dialogue: 0,0:00:27.80,0:00:28.04,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 04.37s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.05  -1.39  -0.25  -1.50  +0.09  +0.02
+Dialogue: 0,0:00:28.04,0:00:28.28,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 04.49s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.04  -1.38  -0.25  -1.51  +0.08  +0.03
+Dialogue: 0,0:00:28.28,0:00:28.52,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 04.61s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.02  -1.37  -0.26  -1.51  +0.07  +0.04
+Dialogue: 0,0:00:28.52,0:00:28.76,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 04.73s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: +0.00  -1.36  -0.27  -1.52  +0.05  +0.04
+Dialogue: 0,0:00:28.76,0:00:29.00,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 04.85s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.01  -1.35  -0.28  -1.52  +0.04  +0.05
+Dialogue: 0,0:00:29.00,0:00:29.24,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 04.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.03  -1.34  -0.28  -1.53  +0.02  +0.06
+Dialogue: 0,0:00:29.24,0:00:29.48,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 05.09s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.05  -1.34  -0.29  -1.53  +0.01  +0.07
+Dialogue: 0,0:00:29.48,0:00:29.72,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 05.21s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.07  -1.33  -0.29  -1.54  -0.01  +0.07
+Dialogue: 0,0:00:29.72,0:00:29.96,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 05.33s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.09  -1.32  -0.30  -1.55  -0.03  +0.08
+Dialogue: 0,0:00:29.96,0:00:30.20,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 05.45s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.11  -1.31  -0.30  -1.55  -0.05  +0.09
+Dialogue: 0,0:00:30.20,0:00:30.44,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 05.57s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.13  -1.30  -0.31  -1.56  -0.07  +0.10
+Dialogue: 0,0:00:30.44,0:00:30.68,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 05.69s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.15  -1.30  -0.31  -1.57  -0.08  +0.11
+Dialogue: 0,0:00:30.68,0:00:30.92,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 05.81s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.17  -1.29  -0.32  -1.57  -0.10  +0.11
+Dialogue: 0,0:00:30.92,0:00:31.16,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 05.93s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.20  -1.28  -0.32  -1.58  -0.12  +0.12
+Dialogue: 0,0:00:31.16,0:00:31.40,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 06.05s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.22  -1.27  -0.32  -1.59  -0.14  +0.13
+Dialogue: 0,0:00:31.40,0:00:31.64,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 06.17s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.24  -1.27  -0.33  -1.59  -0.15  +0.14
+Dialogue: 0,0:00:31.64,0:00:31.88,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 06.29s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.25  -1.26  -0.33  -1.60  -0.17  +0.15
+Dialogue: 0,0:00:31.88,0:00:32.12,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 06.41s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.27  -1.26  -0.33  -1.61  -0.19  +0.15
+Dialogue: 0,0:00:32.12,0:00:32.36,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 06.53s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.29  -1.25  -0.34  -1.61  -0.20  +0.16
+Dialogue: 0,0:00:32.36,0:00:32.60,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 06.65s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.31  -1.25  -0.34  -1.62  -0.22  +0.17
+Dialogue: 0,0:00:32.60,0:00:32.84,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 06.77s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.32  -1.24  -0.34  -1.62  -0.23  +0.17
+Dialogue: 0,0:00:32.84,0:00:33.08,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 06.89s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.34  -1.24  -0.34  -1.63  -0.24  +0.18
+Dialogue: 0,0:00:33.08,0:00:33.32,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 07.01s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.35  -1.23  -0.34  -1.63  -0.26  +0.18
+Dialogue: 0,0:00:33.32,0:00:33.56,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 07.13s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.36  -1.23  -0.35  -1.64  -0.27  +0.19
+Dialogue: 0,0:00:33.56,0:00:33.80,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 07.25s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.37  -1.23  -0.35  -1.64  -0.28  +0.19
+Dialogue: 0,0:00:33.80,0:00:34.04,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 07.37s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.38  -1.22  -0.35  -1.64  -0.28  +0.19
+Dialogue: 0,0:00:34.04,0:00:34.28,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 07.49s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.39  -1.22  -0.35  -1.65  -0.29  +0.20
+Dialogue: 0,0:00:34.28,0:00:34.52,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 07.61s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:34.52,0:00:34.76,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 07.73s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:34.76,0:00:35.00,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 07.85s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:35.00,0:00:35.24,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 07.97s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:35.24,0:00:35.48,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.09s | Recorded state: EXECUTING | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:35.48,0:00:35.72,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.21s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:35.72,0:00:35.74,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.33s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:35.74,0:00:42.74,Accent,,0,0,0,,{\an7\pos(28,132)\q2}PAUSED FOR EXPLANATION
+Dialogue: 0,0:00:35.74,0:00:42.74,Heading,,0,0,0,,{\an7\pos(28,183)\q2}Result / B owns the outcome
+Dialogue: 0,0:00:35.74,0:00:42.74,Body,,0,0,0,,{\an7\pos(28,285)\q2}The arm has reached B, not A. B is\Ndeclared successful only after its\Nown measured settling checks. The old\Ngoal cannot complete the new Future.
+Dialogue: 0,0:00:35.74,0:00:42.74,Proof,,0,0,0,,{\an7\pos(28,565)\q2}Recorded outcomes: A = CANCELLED\N(REPLACED); B = SUCCEEDED.
+Dialogue: 0,0:00:35.74,0:00:42.74,Data,,0,0,0,,{\an7\pos(28,795)\q2}Reading pause = frozen video frame. It is\Nnot an extra robot stop or a new simulation\Nevent.
+Dialogue: 0,0:00:35.74,0:00:35.98,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:35.98,0:00:36.22,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:36.22,0:00:36.46,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:36.46,0:00:36.70,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:36.70,0:00:36.94,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:36.94,0:00:37.18,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:37.18,0:00:37.42,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:37.42,0:00:37.66,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:37.66,0:00:37.90,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:37.90,0:00:38.14,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:38.14,0:00:38.38,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:38.38,0:00:38.62,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:38.62,0:00:38.86,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:38.86,0:00:39.10,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:39.10,0:00:39.34,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:39.34,0:00:39.58,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:39.58,0:00:39.82,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:39.82,0:00:40.06,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:40.06,0:00:40.30,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:40.30,0:00:40.54,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:40.54,0:00:40.78,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:40.78,0:00:41.02,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:41.02,0:00:41.26,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:41.26,0:00:41.50,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:41.50,0:00:41.74,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:41.74,0:00:41.98,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:41.98,0:00:42.22,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:42.22,0:00:42.46,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:42.46,0:00:42.70,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:42.70,0:00:42.74,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:42.74,0:00:47.07,Accent,,0,0,0,,{\an7\pos(28,132)\q2}SOURCE FOOTAGE PLAYING AT 0.5x
+Dialogue: 0,0:00:42.74,0:00:47.07,Heading,,0,0,0,,{\an7\pos(28,183)\q2}Result / B owns the outcome
+Dialogue: 0,0:00:42.74,0:00:47.07,Body,,0,0,0,,{\an7\pos(28,285)\q2}The arm has reached B, not A. B is\Ndeclared successful only after its\Nown measured settling checks. The old\Ngoal cannot complete the new Future.
+Dialogue: 0,0:00:42.74,0:00:47.07,Proof,,0,0,0,,{\an7\pos(28,565)\q2}Recorded outcomes: A = CANCELLED\N(REPLACED); B = SUCCEEDED.
+Dialogue: 0,0:00:42.74,0:00:47.07,Data,,0,0,0,,{\an7\pos(28,795)\q2}Reading pause = frozen video frame. It is\Nnot an extra robot stop or a new simulation\Nevent.
+Dialogue: 0,0:00:42.74,0:00:42.98,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.30s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:42.98,0:00:43.22,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.42s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:43.22,0:00:43.46,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.54s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:43.46,0:00:43.70,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.66s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:43.70,0:00:43.94,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.78s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:43.94,0:00:44.18,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 08.90s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:44.18,0:00:44.42,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 09.02s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:44.42,0:00:44.66,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 09.14s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:44.66,0:00:44.90,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 09.26s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:44.90,0:00:45.14,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 09.38s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:45.14,0:00:45.38,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 09.50s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:45.38,0:00:45.62,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 09.62s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:45.62,0:00:45.86,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 09.74s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:45.86,0:00:46.10,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 09.86s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:46.10,0:00:46.34,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 09.98s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:46.34,0:00:46.58,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 10.10s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:46.58,0:00:46.82,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 10.22s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:46.82,0:00:47.06,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 10.34s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20
+Dialogue: 0,0:00:47.06,0:00:47.07,Data,,0,0,0,,{\an7\pos(600,918)\q2}Source 10.46s | Recorded state: IDLE | Last feedback age: 0.00s\NLast received q [rad]: -0.40  -1.22  -0.35  -1.65  -0.30  +0.20

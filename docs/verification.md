@@ -1,5 +1,19 @@
 # Verified results — 2026-11-15
 
+## Explanatory presentation update — 2026-11-16
+
+The original executions below are unchanged. New instructional replays play their
+footage at 0.5× speed and add explicitly labeled freeze frames for reading. A side
+panel explains the commands, why the controller/supervisor changes state, and which
+outcome is being verified. Source timestamps and last-received telemetry are retained.
+The main README now documents exact targets and source-clock timelines for each case.
+
+The explained chapters last approximately 68 s (motion), 47 s (replacement), and
+76 s (fault/recovery), with a combined duration of approximately 191 s. They are
+presentation edits, not new simulation runs. All four files are fully decoded with
+ffmpeg; metadata and results are in `artifacts/demo-clips/explained-media-validation.json`.
+The source recordings, original receipts, and original test results remain available.
+
 Final command, from a fresh simulation:
 
 ```bash

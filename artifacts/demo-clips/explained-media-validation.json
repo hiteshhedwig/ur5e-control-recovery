@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "file": "00-explained-demo.mp4",
+      "fully_decoded": true,
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1600,
+          "height": 1000,
+          "nb_frames": "5744"
+        }
+      ],
+      "format": {
+        "duration": "191.468000",
+        "size": "3746186"
+      }
+    },
+    {
+      "file": "01-verified-motion-explained.mp4",
+      "fully_decoded": true,
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1600,
+          "height": 1000,
+          "nb_frames": "2042"
+        }
+      ],
+      "format": {
+        "duration": "68.067000",
+        "size": "1408311"
+      }
+    },
+    {
+      "file": "02-command-replacement-explained.mp4",
+      "fully_decoded": true,
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1600,
+          "height": 1000,
+          "nb_frames": "1412"
+        }
+      ],
+      "format": {
+        "duration": "47.067000",
+        "size": "890852"
+      }
+    },
+    {
+      "file": "03-fault-and-recovery-explained.mp4",
+      "fully_decoded": true,
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1600,
+          "height": 1000,
+          "nb_frames": "2290"
+        }
+      ],
+      "format": {
+        "duration": "76.334000",
+        "size": "1447703"
+      }
+    }
+  ]
+}

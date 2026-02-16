@@ -1,0 +1,88 @@
+{
+  "source": "02-command-replacement.mp4",
+  "output": "02-command-replacement-explained.mp4",
+  "duration_seconds": 47.069,
+  "editorial_note": "0.5x source playback with explicitly labeled explanation freezes; no new execution results",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 7.0,
+      "source_start": 0,
+      "source_end": 0,
+      "freeze": true,
+      "heading": "What are we testing?",
+      "body": "What happens when a new command arrives before the current motion has finished? B must replace A, rather than wait in a queue.",
+      "proof": "Watch for the change of direction before the arm reaches A."
+    },
+    {
+      "start": 7.0,
+      "end": 8.934,
+      "source_start": 0,
+      "source_end": 0.9664503189998505,
+      "freeze": false,
+      "heading": "What are we testing?",
+      "body": "What happens when a new command arrives before the current motion has finished? B must replace A, rather than wait in a queue.",
+      "proof": "Watch for the change of direction before the arm reaches A."
+    },
+    {
+      "start": 8.934,
+      "end": 12.934,
+      "source_start": 0.9664503189998505,
+      "source_end": 0.9664503189998505,
+      "freeze": true,
+      "heading": "1 / A is still executing",
+      "body": "Start toward pose A with a six-second trajectory. The program waits only 2.2 wall seconds before requesting a replacement.",
+      "proof": "A is unfinished when the replacement request arrives."
+    },
+    {
+      "start": 12.934,
+      "end": 17.401,
+      "source_start": 0.9664503189998505,
+      "source_end": 3.1680506039994363,
+      "freeze": false,
+      "heading": "1 / A is still executing",
+      "body": "Start toward pose A with a six-second trajectory. The program waits only 2.2 wall seconds before requesting a replacement.",
+      "proof": "A is unfinished when the replacement request arrives."
+    },
+    {
+      "start": 17.401,
+      "end": 25.401,
+      "source_start": 3.1680506039994363,
+      "source_end": 3.1680506039994363,
+      "freeze": true,
+      "heading": "2 / Cancel A; start B",
+      "body": "Request cancellation and wait for the controller's acknowledgement. Mark A as CANCELLED / REPLACED, then send B with a distinct command ID.",
+      "proof": "Acknowledgement is a protocol event. It does not mean the joints instantly reached zero velocity."
+    },
+    {
+      "start": 25.401,
+      "end": 35.735,
+      "source_start": 3.1680506039994363,
+      "source_end": 8.304343971000126,
+      "freeze": false,
+      "heading": "2 / Cancel A; start B",
+      "body": "Request cancellation and wait for the controller's acknowledgement. Mark A as CANCELLED / REPLACED, then send B with a distinct command ID.",
+      "proof": "Acknowledgement is a protocol event. It does not mean the joints instantly reached zero velocity."
+    },
+    {
+      "start": 35.735,
+      "end": 42.735,
+      "source_start": 8.304343971000126,
+      "source_end": 8.304343971000126,
+      "freeze": true,
+      "heading": "Result / B owns the outcome",
+      "body": "The arm has reached B, not A. B is declared successful only after its own measured settling checks. The old goal cannot complete the new Future.",
+      "proof": "Recorded outcomes: A = CANCELLED (REPLACED); B = SUCCEEDED."
+    },
+    {
+      "start": 42.735,
+      "end": 47.069,
+      "source_start": 8.304343971000126,
+      "source_end": 10.5,
+      "freeze": false,
+      "heading": "Result / B owns the outcome",
+      "body": "The arm has reached B, not A. B is declared successful only after its own measured settling checks. The old goal cannot complete the new Future.",
+      "proof": "Recorded outcomes: A = CANCELLED (REPLACED); B = SUCCEEDED."
+    }
+  ]
+}

@@ -10,26 +10,137 @@ and reproducible integration tests.
 
 **Verified:** 8 integration tests passing · Headless and graphical simulation · No physical hardware or paid services
 
-## Demo
+## Understand the demonstrations
 
-[![Animated preview of the simulated UR5e executing joint commands](artifacts/demo-clips/motion-preview.gif)](artifacts/demo-clips/00-full-demo.mp4)
+**Start with the [explained walkthrough — about 3 minutes](artifacts/demo-clips/00-explained-demo.mp4).**
+It introduces each scenario, plays the recorded motion at **0.5× speed**, and pauses
+at the decisions that were too quick to follow in the original clips. A side panel
+explains the current command, software decision, and expected outcome.
 
-**[Watch the complete demonstration — 44 seconds](artifacts/demo-clips/00-full-demo.mp4)**
+[![Explained walkthrough showing the feedback-loss decision beside the simulated robot](artifacts/demo-clips/explained-preview.png)](artifacts/demo-clips/00-explained-demo.mp4)
 
-| Clip | What to look for | Duration |
+| Explained clip | Question it answers | Length |
 | --- | --- | --- |
-| [Verified robot motion](artifacts/demo-clips/01-verified-motion.mp4) | Three joint targets, timed execution, and measured completion | 19 s |
-| [Command replacement](artifacts/demo-clips/02-command-replacement.mp4) | Cancel an active goal and independently complete its replacement | 11 s |
-| [Fault detection and recovery](artifacts/demo-clips/03-fault-and-recovery.mp4) | Detect stale feedback, reject new commands, recover explicitly, and execute fresh intent | 15 s |
+| [1. Verified robot motion](artifacts/demo-clips/01-verified-motion-explained.mp4) | Did the robot actually reach the requested joint configuration? | 68 s |
+| [2. Command replacement](artifacts/demo-clips/02-command-replacement-explained.mp4) | What happens when B arrives while A is still executing? | 47 s |
+| [3. Fault detection and recovery](artifacts/demo-clips/03-fault-and-recovery-explained.mp4) | What happens when feedback disappears, and what permits motion again? | 76 s |
 
-The MP4s contain actual, continuous Gazebo window captures with captions and telemetry
-from the execution run. Playback is not sped up. The GIF is a shorter preview; click
-it to open the complete video. Clips are silent and captioned.
+**How to read the replay:** “PAUSED FOR EXPLANATION” means an editorial freeze so you
+can read; it is not an additional robot stop. The footer shows the **source recording
+clock**, recorded supervisor state, and age of the last feedback sample. These values
+freeze during a reading pause. The timelines below use that source clock, so they also
+match the [original 44-second, real-time recording](artifacts/demo-clips/00-full-demo.mp4).
+The explained videos are edited replays of the same executions, not new test runs.
+All clips are silent and captioned.
 
-In the fault clip, feedback is deliberately interrupted **at the supervisor's
-consumer**, while physics continues. Displayed joint values remain at the last
-received sample as the feedback-age counter increases. This exercises the watchdog;
-it does not claim to reproduce a physical network failure.
+### The targets: what are A, B, and home?
+
+![A, B, and home shown in frames from the actual motion recording](artifacts/demo-clips/pose-reference.png)
+
+A and B are **six joint angles**, not task names. The program specifies angles in
+radians, in this order: shoulder pan, shoulder lift, elbow, wrist 1, wrist 2, wrist 3.
+The existing controller moves the joints between configurations; this demo does not
+ask the robot to grasp an object or plan a Cartesian path.
+
+| Configuration | Six commanded joint angles, in radians | What changes visibly |
+| --- | --- | --- |
+| A | `[+0.35, -1.08, -0.72, -1.30, +0.45, 0.00]` | Bend the elbow, turn the base in the positive direction, and change wrist orientation |
+| B | `[-0.40, -1.22, -0.35, -1.65, -0.30, +0.20]` | Turn the base in the opposite direction, reduce the elbow bend, and reorient the wrist |
+| Home | `[0.00, -1.57, 0.00, -1.57, 0.00, 0.00]` | Return to the near-upright configuration |
+
+### 1. Verified robot motion — command, execute, measure
+
+**[Watch the explained motion clip](artifacts/demo-clips/01-verified-motion-explained.mp4)** · [Original footage](artifacts/demo-clips/01-verified-motion.mp4)
+
+**Purpose:** show that a requested motion actually happened. A successful action
+response alone is insufficient evidence.
+
+1. Starting from a near-upright pose, Python sends A through the existing
+   `FollowJointTrajectory` action, with a four-second duration in simulation time.
+2. The controller interpolates the trajectory and applies joint efforts through
+   `gazebo_ros_control`. Gazebo advances the robot's physics.
+3. After the controller reports success, the supervisor also requires fresh measured
+   joint positions within **0.03 rad**, speed below **0.05 rad/s**, and **0.25 simulated
+   seconds** of settling. Only then does its Future return `SUCCEEDED`.
+4. The program repeats this process for B, then home. The changing elbow bend and
+   base/wrist orientation are the motion to watch.
+
+| Source time | What happens |
+| --- | --- |
+| 0.8 s | Send A; the arm starts moving |
+| 5.8 s | A passes measured completion checks |
+| 7.4 s | Send B |
+| 12.4 s | B passes; send home |
+| 17.4 s | Home passes; all three moves are complete |
+
+**Recorded result:** all three moves returned `SUCCEEDED / MEASURED_TARGET_REACHED`.
+Maximum joint error at the recorded terminal observations was about **0.00218 rad
+for A**, **0.00143 rad for B**, and **0.000024 rad for home**. These are the larger
+filmed motions; the separate baseline test has its own measurements below.
+
+### 2. Command replacement — interrupt A and complete B
+
+**[Watch the explained replacement clip](artifacts/demo-clips/02-command-replacement-explained.mp4)** · [Original footage](artifacts/demo-clips/02-command-replacement.mp4)
+
+**Purpose:** show how the integration handles a changed instruction during an active
+motion. B should replace A rather than wait for A to finish.
+
+1. Start moving toward A on a **six-second simulated trajectory**.
+2. After about **2.2 wall seconds**, while A is still unfinished, submit B with
+   `replace=True`.
+3. The supervisor requests cancellation, waits for the controller's acknowledgement,
+   and completes A's Future as `CANCELLED`, reason `REPLACED`.
+4. It submits B with a separate command ID and Future. The controller takes the
+   joints toward B; B must pass its own measured completion checks.
+
+| Source time | What happens | What to watch |
+| --- | --- | --- |
+| 0.8 s | A starts | The elbow begins bending toward A |
+| 3.0 s | Request B before A completes | Motion changes toward B; the arm does not first finish A |
+| 8.1 s | B passes measured completion | The arm settles in configuration B |
+
+**Recorded result:** A was cancelled about **0.58 rad short of its requested joint
+configuration** at the largest joint error. B then succeeded within about **0.00143 rad**.
+These are distinct outcomes: finishing B does not make the interrupted A successful.
+Cancellation acknowledgement also does **not** imply an instantaneous zero-velocity stop;
+the upstream controller handles the motion transition.
+
+### 3. Fault detection and recovery — lose feedback, latch, restore
+
+**[Watch the explained fault/recovery clip](artifacts/demo-clips/03-fault-and-recovery-explained.mp4)** · [Original footage](artifacts/demo-clips/03-fault-and-recovery.mp4)
+
+**Purpose:** show what the supervisor does when it can no longer verify execution,
+and prove that recovery requires more than sending another command.
+
+The injected fault **drops joint-state samples at the supervisor's consumer**.
+Gazebo and the robot controller keep running. This is a controlled feedback-loss
+experiment; it is not a disconnected physical cable or a stopped physics engine.
+
+| Source time | Trigger or decision | Robot / software behavior |
+| --- | --- | --- |
+| 0.8 s | Begin moving toward A | `EXECUTING`; measured feedback is fresh |
+| 2.6 s | Stop delivering samples to the supervisor | The arm can still move; displayed last-received joint values freeze and feedback age rises |
+| 3.1 s | Feedback exceeds the 0.50 wall-second freshness limit | Latch `FAULT / STALE_FEEDBACK` and request cancellation; the recorded controller acknowledges it |
+| 5.1 s | Attempt another command while faulted | Reject the request; **there is no new robot motion to watch for at this software-only step** |
+| 6.6 s | Restore feedback and explicitly call `recover()` | Check that the controller is running, feedback is fresh and advancing, and measured velocity has settled |
+| 6.9 s | Recovery completes; submit fresh B | Accept a new command; do not resume the unfinished A |
+| 12.0 s | B reaches its target | Measured checks pass; the supervisor returns to `IDLE` |
+
+The recorded detection interval was approximately **0.52 wall seconds** from injection
+to the reported fault. The interrupted A remained about **0.62 rad from its target**;
+it was not declared successful. After recovery, fresh B succeeded within about
+**0.00143 rad**.
+
+**What the apparent stops mean:** cancellation allows the existing controller to
+reduce motion; it is not a certified hardware emergency stop. The longer pauses
+labeled “PAUSED FOR EXPLANATION” in the new videos are editing pauses. The stationary
+interval after the fault demonstrates inhibited new commands, not a crash or a
+completed A. Seeing the robot move toward B afterward is the recovery demonstration.
+
+**What this proves:** this feedback-loss scenario is detected, stays latched, blocks
+new intent, and permits verified fresh execution after explicit readiness checks.
+It does not validate every network failure or prove physical safety. Event receipts,
+command IDs, and recorded state are in the [scenario evidence](artifacts/demo-clips/README.md).
 
 ## Capabilities
 
@@ -69,7 +180,7 @@ No custom physics engine, servo controller, motion planner, or middleware is int
 
 ## Verified results
 
-The recorded run on **2026-11-15** passed the baseline and all eight integration tests
+The recorded run passed the baseline and all eight integration tests
 with the graphical client running. Across the three baseline moves, maximum final
 joint error was approximately **0.00013 rad**, against a **0.03 rad** threshold.
 This describes the tested scenarios, not a general robot-accuracy claim.
@@ -97,8 +208,10 @@ Saved evidence:
 - [Video evidence and decoding checks](artifacts/demo-clips/README.md)
 - [Verification report](docs/verification.md)
 
-All four exported MP4s were fully decoded without errors. Representative frames were
-visually checked for robot motion, framing, and readable captions.
+The four original MP4s and four explained replays were fully decoded without errors.
+Representative frames were visually checked for robot motion, framing, and readable
+captions. [Explained-video validation](artifacts/demo-clips/explained-media-validation.json)
+records the new exports separately from the original test results.
 
 ## Requirements and setup
 
@@ -186,29 +299,20 @@ Gazebo window, adds captions from timestamped execution data, exports the three
 chapters and combined MP4, and verifies decoding. Exports and evidence are in
 `artifacts/demo-clips/`; source recordings stay in `.runtime/recordings/`.
 
+To rebuild the slower explanatory versions from the tracked original MP4s and event
+receipts, without running a new simulation:
+
+```bash
+/usr/bin/python3 scripts/explain_clips.py
+```
+
+This produces the `*-explained.mp4` chapters and `00-explained-demo.mp4`, with
+0.5× playback, labeled reading pauses, and a side panel explaining each decision.
+The original real-time clips remain unchanged.
+
 Verification JSON files are replaced by subsequent runs; execution event logs append.
 The runner retains its original `run_milestone1.py` name because the baseline remains
 the first gate before tests, demonstrations, or recording.
-
-## Engineering decisions
-
-**Sequence initialization before controller execution.** The original concurrent
-bringup activated controllers before the spawn utility applied the initial pose.
-The project configures the robot while paused, loads controllers, then unpauses
-physics to complete activation. Measured initial state is checked before motion.
-
-**Retain effort-driven simulation.** A position-interface fallback showed inconsistent
-position/velocity behavior during settling. The final setup retains upstream effort
-gains and uses a **100 µs physics timestep**, which passed repeated checks. The default
-1 ms step failed goal checks in this setup. This is an empirical configuration choice,
-not a complete stability analysis or a hard real-time guarantee.
-
-**Make recovery explicit.** A fault blocks new intent. Recovery requires a running
-controller and fresh, settled state; it does not replay the old command. Cancellation
-acknowledgement is an action-protocol result, not proof of a physical stop.
-
-Failed baseline traces are preserved. Read the [startup and timestep investigation](docs/milestone1.md)
-and [execution architecture and fault policy](docs/execution.md).
 
 ## Repository map
 
@@ -224,6 +328,7 @@ scripts/run_milestone1.py         Lifecycle, baseline, tests, and demo runner
 scripts/demo.py                   Narrated execution/recovery scenario
 scripts/record_clips.py           Window capture and measured-data captions
 scripts/finalize_clips.py         Combined demo and decoding checks
+scripts/explain_clips.py          Slower walkthroughs with event explanations
 tests/integration.py              Eight simulator-backed regression scenarios
 artifacts/                       Measurements, logs, experiments, and videos
 docs/                            Architecture, decisions, and verification

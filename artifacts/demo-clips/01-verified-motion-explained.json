@@ -1,0 +1,128 @@
+{
+  "source": "01-verified-motion.mp4",
+  "output": "01-verified-motion-explained.mp4",
+  "duration_seconds": 68.06899999999999,
+  "editorial_note": "0.5x source playback with explicitly labeled explanation freezes; no new execution results",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.0,
+      "source_start": 0,
+      "source_end": 0,
+      "freeze": true,
+      "heading": "What are we testing?",
+      "body": "Can a Python command move all six simulated joints to a requested pose, and can we verify that it actually arrived?",
+      "proof": "Watch the elbow bend, the base turn, and the wrist change orientation."
+    },
+    {
+      "start": 6.0,
+      "end": 8.0,
+      "source_start": 0,
+      "source_end": 0.9686978530000124,
+      "freeze": false,
+      "heading": "What are we testing?",
+      "body": "Can a Python command move all six simulated joints to a requested pose, and can we verify that it actually arrived?",
+      "proof": "Watch the elbow bend, the base turn, and the wrist change orientation."
+    },
+    {
+      "start": 8.0,
+      "end": 12.0,
+      "source_start": 0.9686978530000124,
+      "source_end": 0.9686978530000124,
+      "freeze": true,
+      "heading": "1 / Request pose A",
+      "body": "Send six joint angles through the existing ROS trajectory action. The controller interpolates a four-second move in simulation time.",
+      "proof": "A = [+0.35, -1.08, -0.72, -1.30, +0.45, 0.00] rad"
+    },
+    {
+      "start": 12.0,
+      "end": 21.933999999999997,
+      "source_start": 0.9686978530000124,
+      "source_end": 5.934258986999485,
+      "freeze": false,
+      "heading": "1 / Request pose A",
+      "body": "Send six joint angles through the existing ROS trajectory action. The controller interpolates a four-second move in simulation time.",
+      "proof": "A = [+0.35, -1.08, -0.72, -1.30, +0.45, 0.00] rad"
+    },
+    {
+      "start": 21.933999999999997,
+      "end": 26.933999999999997,
+      "source_start": 5.934258986999485,
+      "source_end": 5.934258986999485,
+      "freeze": true,
+      "heading": "2 / Verify arrival at A",
+      "body": "The action reports success. The supervisor also checks fresh measured position and velocity over a settling interval before declaring success.",
+      "proof": "Required: error <= 0.03 rad, speed <= 0.05 rad/s, settled for 0.25 simulated seconds."
+    },
+    {
+      "start": 26.933999999999997,
+      "end": 30.200999999999997,
+      "source_start": 5.934258986999485,
+      "source_end": 7.535741088999348,
+      "freeze": false,
+      "heading": "2 / Verify arrival at A",
+      "body": "The action reports success. The supervisor also checks fresh measured position and velocity over a settling interval before declaring success.",
+      "proof": "Required: error <= 0.03 rad, speed <= 0.05 rad/s, settled for 0.25 simulated seconds."
+    },
+    {
+      "start": 30.200999999999997,
+      "end": 34.20099999999999,
+      "source_start": 7.535741088999348,
+      "source_end": 7.535741088999348,
+      "freeze": true,
+      "heading": "3 / Request pose B",
+      "body": "Now send a different configuration: turn the base in the opposite direction, reduce the elbow bend, and change wrist orientation.",
+      "proof": "B = [-0.40, -1.22, -0.35, -1.65, -0.30, +0.20] rad"
+    },
+    {
+      "start": 34.20099999999999,
+      "end": 44.334999999999994,
+      "source_start": 7.535741088999348,
+      "source_end": 12.59679314199926,
+      "freeze": false,
+      "heading": "3 / Request pose B",
+      "body": "Now send a different configuration: turn the base in the opposite direction, reduce the elbow bend, and change wrist orientation.",
+      "proof": "B = [-0.40, -1.22, -0.35, -1.65, -0.30, +0.20] rad"
+    },
+    {
+      "start": 44.334999999999994,
+      "end": 48.334999999999994,
+      "source_start": 12.59679314199926,
+      "source_end": 12.59679314199926,
+      "freeze": true,
+      "heading": "4 / Return to home",
+      "body": "B has passed the same measured checks. Send the near-upright home pose and verify the return motion too.",
+      "proof": "Home = [0.00, -1.57, 0.00, -1.57, 0.00, 0.00] rad"
+    },
+    {
+      "start": 48.334999999999994,
+      "end": 58.401999999999994,
+      "source_start": 12.59679314199926,
+      "source_end": 17.607709364999355,
+      "freeze": false,
+      "heading": "4 / Return to home",
+      "body": "B has passed the same measured checks. Send the near-upright home pose and verify the return motion too.",
+      "proof": "Home = [0.00, -1.57, 0.00, -1.57, 0.00, 0.00] rad"
+    },
+    {
+      "start": 58.401999999999994,
+      "end": 64.40199999999999,
+      "source_start": 17.607709364999355,
+      "source_end": 17.607709364999355,
+      "freeze": true,
+      "heading": "Result / Three verified moves",
+      "body": "A, B, and home each completed successfully. This is joint-space control: there is no object, grasp, or Cartesian planning task in this clip.",
+      "proof": "Evidence: three SUCCEEDED results, each with reason MEASURED_TARGET_REACHED."
+    },
+    {
+      "start": 64.40199999999999,
+      "end": 68.06899999999999,
+      "source_start": 17.607709364999355,
+      "source_end": 19.467,
+      "freeze": false,
+      "heading": "Result / Three verified moves",
+      "body": "A, B, and home each completed successfully. This is joint-space control: there is no object, grasp, or Cartesian planning task in this clip.",
+      "proof": "Evidence: three SUCCEEDED results, each with reason MEASURED_TARGET_REACHED."
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "source": "03-fault-and-recovery.mp4",
+  "output": "03-fault-and-recovery-explained.mp4",
+  "duration_seconds": 76.336,
+  "editorial_note": "0.5x source playback with explicitly labeled explanation freezes; no new execution results",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 7.0,
+      "source_start": 0,
+      "source_end": 0,
+      "freeze": true,
+      "heading": "What are we testing?",
+      "body": "If joint-state feedback disappears during motion, does the supervisor detect it, block new commands, and recover without replaying old intent?",
+      "proof": "The injected fault is feedback delivery at the consumer. The simulator remains running."
+    },
+    {
+      "start": 7.0,
+      "end": 9.0,
+      "source_start": 0,
+      "source_end": 0.9674535360001392,
+      "freeze": false,
+      "heading": "What are we testing?",
+      "body": "If joint-state feedback disappears during motion, does the supervisor detect it, block new commands, and recover without replaying old intent?",
+      "proof": "The injected fault is feedback delivery at the consumer. The simulator remains running."
+    },
+    {
+      "start": 9.0,
+      "end": 12.0,
+      "source_start": 0.9674535360001392,
+      "source_end": 0.9674535360001392,
+      "freeze": true,
+      "heading": "1 / Motion and feedback",
+      "body": "Begin a six-second move toward A. Joint feedback is arriving and the supervisor is EXECUTING.",
+      "proof": "The arm is moving; feedback age is normally close to zero."
+    },
+    {
+      "start": 12.0,
+      "end": 15.667,
+      "source_start": 0.9674535360001392,
+      "source_end": 2.7699519790004707,
+      "freeze": false,
+      "heading": "1 / Motion and feedback",
+      "body": "Begin a six-second move toward A. Joint feedback is arriving and the supervisor is EXECUTING.",
+      "proof": "The arm is moving; feedback age is normally close to zero."
+    },
+    {
+      "start": 15.667,
+      "end": 21.667,
+      "source_start": 2.7699519790004707,
+      "source_end": 2.7699519790004707,
+      "freeze": true,
+      "heading": "2 / Interrupt feedback",
+      "body": "Stop delivering joint-state samples to the supervisor. Physics and the controller continue. The displayed last-received joint values now freeze.",
+      "proof": "Watch feedback age rise past the 0.50 wall-second watchdog limit."
+    },
+    {
+      "start": 21.667,
+      "end": 22.734,
+      "source_start": 2.7699519790004707,
+      "source_end": 3.2875004320004884,
+      "freeze": false,
+      "heading": "2 / Interrupt feedback",
+      "body": "Stop delivering joint-state samples to the supervisor. Physics and the controller continue. The displayed last-received joint values now freeze.",
+      "proof": "Watch feedback age rise past the 0.50 wall-second watchdog limit."
+    },
+    {
+      "start": 22.734,
+      "end": 30.734,
+      "source_start": 3.2875004320004884,
+      "source_end": 3.2875004320004884,
+      "freeze": true,
+      "heading": "3 / Detect and latch FAULT",
+      "body": "About 0.52 wall seconds after injection, the supervisor reports STALE_FEEDBACK and requests cancellation. The recorded controller acknowledges cancellation.",
+      "proof": "Cancellation permits controller deceleration. It is not proof of an instantaneous or certified physical stop."
+    },
+    {
+      "start": 30.734,
+      "end": 34.801,
+      "source_start": 3.2875004320004884,
+      "source_end": 5.289566127000544,
+      "freeze": false,
+      "heading": "3 / Detect and latch FAULT",
+      "body": "About 0.52 wall seconds after injection, the supervisor reports STALE_FEEDBACK and requests cancellation. The recorded controller acknowledges cancellation.",
+      "proof": "Cancellation permits controller deceleration. It is not proof of an instantaneous or certified physical stop."
+    },
+    {
+      "start": 34.801,
+      "end": 40.801,
+      "source_start": 5.289566127000544,
+      "source_end": 5.289566127000544,
+      "freeze": true,
+      "heading": "4 / Reject new intent",
+      "body": "A new move request is deliberately attempted. The supervisor rejects it because the fault is latched. This is a software decision: no new motion should appear.",
+      "proof": "Clearing the last error message alone does not re-enable commands."
+    },
+    {
+      "start": 40.801,
+      "end": 43.868,
+      "source_start": 5.289566127000544,
+      "source_end": 6.790788154000584,
+      "freeze": false,
+      "heading": "4 / Reject new intent",
+      "body": "A new move request is deliberately attempted. The supervisor rejects it because the fault is latched. This is a software decision: no new motion should appear.",
+      "proof": "Clearing the last error message alone does not re-enable commands."
+    },
+    {
+      "start": 43.868,
+      "end": 49.868,
+      "source_start": 6.790788154000584,
+      "source_end": 6.790788154000584,
+      "freeze": true,
+      "heading": "5 / Restore; explicitly recover",
+      "body": "Restore sample delivery and call recover(). It requires a running controller, fresh advancing feedback, and low velocity over a settling interval.",
+      "proof": "Recovery re-establishes readiness; it does not resume unfinished A."
+    },
+    {
+      "start": 49.868,
+      "end": 50.468,
+      "source_start": 6.790788154000584,
+      "source_end": 7.07687654100042,
+      "freeze": false,
+      "heading": "5 / Restore; explicitly recover",
+      "body": "Restore sample delivery and call recover(). It requires a running controller, fresh advancing feedback, and low velocity over a settling interval.",
+      "proof": "Recovery re-establishes readiness; it does not resume unfinished A."
+    },
+    {
+      "start": 50.468,
+      "end": 54.468,
+      "source_start": 7.07687654100042,
+      "source_end": 7.07687654100042,
+      "freeze": true,
+      "heading": "6 / Send a fresh goal B",
+      "body": "After recovery succeeds, submit B as new intent. This is a different target from the interrupted A. Watch the arm move again.",
+      "proof": "B = [-0.40, -1.22, -0.35, -1.65, -0.30, +0.20] rad"
+    },
+    {
+      "start": 54.468,
+      "end": 64.602,
+      "source_start": 7.07687654100042,
+      "source_end": 12.126837873000259,
+      "freeze": false,
+      "heading": "6 / Send a fresh goal B",
+      "body": "After recovery succeeds, submit B as new intent. This is a different target from the interrupted A. Watch the arm move again.",
+      "proof": "B = [-0.40, -1.22, -0.35, -1.65, -0.30, +0.20] rad"
+    },
+    {
+      "start": 64.602,
+      "end": 71.602,
+      "source_start": 12.126837873000259,
+      "source_end": 12.126837873000259,
+      "freeze": true,
+      "heading": "Result / Recovery verified",
+      "body": "The fresh command reaches B and passes measured completion checks. The sequence is: detect, latch, reject, restore, recover, then execute new intent.",
+      "proof": "Recorded outcomes: interrupted A = FAULT (STALE_FEEDBACK); fresh B = SUCCEEDED."
+    },
+    {
+      "start": 71.602,
+      "end": 76.336,
+      "source_start": 12.126837873000259,
+      "source_end": 14.5,
+      "freeze": false,
+      "heading": "Result / Recovery verified",
+      "body": "The fresh command reaches B and passes measured completion checks. The sequence is: detect, latch, reject, restore, recover, then execute new intent.",
+      "proof": "Recorded outcomes: interrupted A = FAULT (STALE_FEEDBACK); fresh B = SUCCEEDED."
+    }
+  ]
+}
